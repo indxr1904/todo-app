@@ -1,0 +1,356 @@
+{
+	"info": {
+		"_postman_id": "b0e92064-0871-4ff7-8e84-3ca93b74a999",
+		"name": "Api's of Todo app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47487854",
+		"_collection_link": "https://inderjeet221777-2809923.postman.co/workspace/Inderjeet-Singh's-Workspace~c948e539-acea-4f9c-85a1-c58fd472bd8b/collection/47487854-b0e92064-0871-4ff7-8e84-3ca93b74a999?action=share&source=collection_link&creator=47487854"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Signup user",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Team",
+			"item": [
+				{
+					"name": "Create Team",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjVmYTEzODAwOGE5OTIzNWQ4MzBiOSIsImlhdCI6MTc2ODI5MDkwMSwiZXhwIjoxNzY4ODk1NzAxfQ.gcLYPFwzcSCmNBjznhu7IOljQaBrQEUfHtz1EfMFUwI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Backend Team\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/teams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add team member",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjVmYTEzODAwOGE5OTIzNWQ4MzBiOSIsImlhdCI6MTc2ODI5MDkwMSwiZXhwIjoxNzY4ODk1NzAxfQ.gcLYPFwzcSCmNBjznhu7IOljQaBrQEUfHtz1EfMFUwI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"6966016ecd4d83aeac9b96c3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/teams/696600d1cd4d83aeac9b96c0/members",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teams",
+								"696600d1cd4d83aeac9b96c0",
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Members",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjVmYTEzODAwOGE5OTIzNWQ4MzBiOSIsImlhdCI6MTc2ODI5MDkwMSwiZXhwIjoxNzY4ODk1NzAxfQ.gcLYPFwzcSCmNBjznhu7IOljQaBrQEUfHtz1EfMFUwI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/teams/696600d1cd4d83aeac9b96c0/members",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teams",
+								"696600d1cd4d83aeac9b96c0",
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Member",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjVmYTEzODAwOGE5OTIzNWQ4MzBiOSIsImlhdCI6MTc2ODI5MDkwMSwiZXhwIjoxNzY4ODk1NzAxfQ.gcLYPFwzcSCmNBjznhu7IOljQaBrQEUfHtz1EfMFUwI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/teams/696600d1cd4d83aeac9b96c0/members/6966016ecd4d83aeac9b96c3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teams",
+								"696600d1cd4d83aeac9b96c0",
+								"members",
+								"6966016ecd4d83aeac9b96c3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "Create Task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjVmYTEzODAwOGE5OTIzNWQ4MzBiOSIsImlhdCI6MTc2ODM3MjA1NywiZXhwIjoxNzY4OTc2ODU3fQ.uPmiJkuzYV0PvZglWB_AGoBiPhTvFmZrd6ORzttzZhU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"title\": \"create login and register api\",\r\n  \"description\": \"Authorization using jwt\",\r\n  \"assignedTo\": \"6966016ecd4d83aeac9b96c3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/teams/696600d1cd4d83aeac9b96c0/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teams",
+								"696600d1cd4d83aeac9b96c0",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tasks",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjVmYTEzODAwOGE5OTIzNWQ4MzBiOSIsImlhdCI6MTc2ODM3MjA1NywiZXhwIjoxNzY4OTc2ODU3fQ.uPmiJkuzYV0PvZglWB_AGoBiPhTvFmZrd6ORzttzZhU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/teams/696600d1cd4d83aeac9b96c0/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teams",
+								"696600d1cd4d83aeac9b96c0",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjVmYTEzODAwOGE5OTIzNWQ4MzBiOSIsImlhdCI6MTc2ODM3MjA1NywiZXhwIjoxNzY4OTc2ODU3fQ.uPmiJkuzYV0PvZglWB_AGoBiPhTvFmZrd6ORzttzZhU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"create login adn signup api and use postman for api documentation\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/tasks/696737c632afbd08b93b4f01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tasks",
+								"696737c632afbd08b93b4f01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Activities ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjVmYTEzODAwOGE5OTIzNWQ4MzBiOSIsImlhdCI6MTc2ODM3MjA1NywiZXhwIjoxNzY4OTc2ODU3fQ.uPmiJkuzYV0PvZglWB_AGoBiPhTvFmZrd6ORzttzZhU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/activities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"activities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
